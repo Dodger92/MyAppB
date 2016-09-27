@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <item
+        android:id="@+id/nav_item_home"
+        android:icon="@drawable/home"
+        android:title="Главная" />
+
+    <item
+        android:id="@+id/nav_item_company"
+        android:icon="@drawable/list"
+        android:title="Компании" />
+
+    <item
+        android:id="@+id/nav_item_category"
+        android:icon="@drawable/cities_icon"
+        android:title="Города" />
+    <item
+        android:id="@+id/nav_item_action"
+        android:icon="@drawable/discount"
+        android:title="Акции" />
+
+
+    <item
+        android:id="@+id/nav_item_users"
+        android:icon="@drawable/info"
+        android:title="О проекте " />
+
+</menu>

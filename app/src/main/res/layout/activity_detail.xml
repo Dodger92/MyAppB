@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".Category.m_JSON.DetailActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/view">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="наименование"
+        android:id="@+id/txt"
+        android:textColor="@color/accent_material_light"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_below="@+id/view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Описание "
+        android:id="@+id/textView7"
+        android:layout_marginTop="26dp"
+        android:textStyle="bold"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/txt"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/nameDetailTxt"
+        android:layout_marginTop="33dp"
+        android:text="anons"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Стоимость"
+        android:id="@+id/textView8"
+        android:textColor="@color/accent_material_light"
+        android:textStyle="bold"
+        android:layout_below="@+id/nameDetailTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="цена"
+        android:id="@+id/priceDetailTxt"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/textView8"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
