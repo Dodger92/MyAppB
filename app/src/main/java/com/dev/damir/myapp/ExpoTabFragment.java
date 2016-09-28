@@ -11,7 +11,6 @@ public class ExpoTabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.expo_tab_layout,null);
-
         return rootView;
     }
 }

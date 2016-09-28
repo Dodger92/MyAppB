@@ -8,8 +8,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.dev.damir.myapp.R;
-
-
 public class DetailActivityActions extends AppCompatActivity {
     TextView nameTxt, contentTxt;
     Toolbar toolbar;

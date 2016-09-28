@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 import com.dev.damir.myapp.R;
 
-
 public class MyViewHolderCities extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
@@ -24,7 +23,7 @@ public class MyViewHolderCities extends RecyclerView.ViewHolder implements View.
     public void onClick(View view) {
         this.itemClickListenerCities.onItemClick(this.getLayoutPosition());
     }
-    public void setItemClickListener(ItemClickListenerCities itemClickListener) {
+    public void setItemClickListenerCities(ItemClickListenerCities itemClickListener) {
         this.itemClickListenerCities = itemClickListener;
     }
 }

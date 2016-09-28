@@ -38,7 +38,7 @@ public class MyAdapterCities extends RecyclerView.Adapter<MyViewHolderCities> {
         //BIND
         holder.nameTxt.setText(name);
         holder.idTxt.setText(id);
-        holder.setItemClickListener(new ItemClickListenerCities() {
+        holder.setItemClickListenerCities(new ItemClickListenerCities() {
             @Override
             public void onItemClick(int pos) {
                 openFirstTab(id);
@@ -54,7 +54,5 @@ public class MyAdapterCities extends RecyclerView.Adapter<MyViewHolderCities> {
         intent.putExtra("id",id);
         c.startActivity(intent);
     }
-
-
     }
 

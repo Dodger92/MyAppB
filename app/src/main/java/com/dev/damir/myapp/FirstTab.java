@@ -13,7 +13,7 @@ import com.dev.damir.myapp.Category.m_JSON.JSONDownloader;
 import com.dev.damir.myapp.api_classes.SharedPreference;
 
 public class FirstTab extends Fragment {
-    String jsonURL = "http://developer92.16mb.com/mentor/public_html/?page=all_categories"+ SharedPreference.getCityName(getContext());
+    String jsonURL = "http://developer92.16mb.com/mentor/public_html/?page=all_categories";//+ SharedPreference.getCityName(getContext());
     RecyclerView rv;
     @Nullable
     @Override

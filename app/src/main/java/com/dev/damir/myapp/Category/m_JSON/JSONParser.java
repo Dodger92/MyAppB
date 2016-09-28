@@ -36,8 +36,8 @@ public class JSONParser extends AsyncTask<Void, Void, Boolean> {
         super.onPreExecute();
 
         pd = new ProgressDialog(c);
-        pd.setTitle("Parse");
-        pd.setMessage("Parsing...Please wait");
+        pd.setTitle("Обработка");
+        pd.setMessage("Обработка...Пожалуйста подождите");
         pd.show();
     }
 
