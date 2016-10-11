@@ -53,7 +53,7 @@ public class JSONParserCities extends AsyncTask<Void, Void, Boolean> {
             rv_cities.setAdapter(new MyAdapterCities(c, cities));
 
         } else {
-            Toast.makeText(c, "Невозможно выполнить синтаксический анализ, проверьте подключение", Toast.LENGTH_SHORT).show();
+            Toast.makeText(c, "Проверьте Интернет подключение", Toast.LENGTH_LONG).show();
         }
     }
 

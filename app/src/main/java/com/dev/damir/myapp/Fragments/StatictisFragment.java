@@ -10,10 +10,6 @@ import android.view.ViewGroup;
 import com.dev.damir.myapp.R;
 
 
-/**
- * Created by Jauhar xlr on 4/18/2016.
- *  mycreativecodes.in
- */
 public class StatictisFragment extends Fragment {
 
     @Nullable

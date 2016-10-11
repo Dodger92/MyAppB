@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dev.damir.myapp.Category.m_Model.Action;
 import com.dev.damir.myapp.R;
 
 import java.util.ArrayList;

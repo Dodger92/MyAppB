@@ -16,15 +16,12 @@ import com.dev.damir.myapp.FirstTab;
 import com.dev.damir.myapp.R;
 
 
-/**
- * Created by Jauhar xlr on 4/18/2016.
- *  mycreativecodes.in
- */
+
 public class HomeFragment extends Fragment {
 
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 2 ;
+    public static int int_items = 1 ;
 
     @Nullable
     @Override
@@ -95,7 +92,7 @@ public class HomeFragment extends Fragment {
 
             switch (position){
                 case 0 :
-                    return "Товары";
+                    return "Компании";
                case 1 :
                     return "Акции";
                 /* case 2 :

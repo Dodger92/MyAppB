@@ -1,4 +1,4 @@
-package com.dev.damir.myapp.Category.m_JSON;
+package com.dev.damir.myapp.CompanyForAction.m_JSON;
 
 
 public interface ItemClickListener {

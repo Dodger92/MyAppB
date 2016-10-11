@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import com.dev.damir.myapp.Products.JSONDownloaderProducts;
+
 public class ProductsActivity extends AppCompatActivity {
     String jsonURL2;
     RecyclerView rv_products;

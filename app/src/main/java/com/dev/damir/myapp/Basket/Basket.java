@@ -1,8 +1,14 @@
-package com.dev.damir.myapp.Category.m_Model;
+package com.dev.damir.myapp.Basket;
+public class Basket {
+String name,anons,content,price,id;
 
+    public String getId() {
+        return id;
+    }
 
-public class Product {
-String name,anons,content,price;
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

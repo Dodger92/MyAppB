@@ -1,4 +1,4 @@
-package com.dev.damir.myapp.Category.m_UI;
+package com.dev.damir.myapp.CompanyForAction.m_UI;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,10 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dev.damir.myapp.Category.m_Model.Category;
-import com.dev.damir.myapp.ProductsActivity;
+import com.dev.damir.myapp.Categories.m_Model.Category;
+import com.dev.damir.myapp.CompanyForAction.m_JSON.ItemClickListener;
+import com.dev.damir.myapp.Fragments.ActionFragment;
 import com.dev.damir.myapp.R;
-import com.dev.damir.myapp.Category.m_JSON.ItemClickListener;
 
 import java.util.ArrayList;
 
@@ -21,15 +21,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     public MyAdapter(Context c, ArrayList<Category> categories) {
         this.c = c;
-
-        
-
         this.categories = categories;
+
+
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(c).inflate(R.layout.model_category, parent, false);
+        View v = LayoutInflater.from(c).inflate(R.layout.model_company_tab, parent, false);
         return new MyViewHolder(v);
     }
 
@@ -37,8 +36,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
 
         Category category = categories.get(position);
-        final String name=category.getName();
-        final String id=category.getId();
+        final String name = category.getName();
+        final String id = category.getId();
         //BIND
         holder.nameTxt.setText(name);
         holder.id.setText(id);
@@ -46,18 +45,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onItemClick(int pos) {
-                openAnotherRecycleView(id);
+                openAnotherRecycleView(id, name);
             }
         });
     }
+
     @Override
     public int getItemCount() {
         return categories.size();
     }
 
-    private void openAnotherRecycleView(String id){
-        Intent intent=new Intent(c, ProductsActivity.class);
-        intent.putExtra("id",id);
+    private void openAnotherRecycleView(String id, String name) {
+        Intent intent = new Intent(c, ActionFragment.class);
+        intent.putExtra("id", id);
+       // SharedPreference.setCompanyName(c, name);
         c.startActivity(intent);
     }
  /*private void openDetailActivity(String...details){

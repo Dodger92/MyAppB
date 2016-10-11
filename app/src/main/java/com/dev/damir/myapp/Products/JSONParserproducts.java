@@ -1,22 +1,16 @@
 package com.dev.damir.myapp.Products;
-
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.dev.damir.myapp.Category.m_Model.Product;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
 public class JSONParserproducts extends AsyncTask<Void, Void, Boolean> {
-
     Context c;
     String jsonData;
     RecyclerView rv_products;
@@ -55,7 +49,7 @@ public class JSONParserproducts extends AsyncTask<Void, Void, Boolean> {
             rv_products.setAdapter(new MyAdapterProducts(c, cities));
 
         } else {
-            Toast.makeText(c, "Невозможно выполнить синтаксический анализ, проверьте подключение", Toast.LENGTH_SHORT).show();
+            Toast.makeText(c, "В выбранной категории,нет данных для отображения", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -72,14 +66,14 @@ public class JSONParserproducts extends AsyncTask<Void, Void, Boolean> {
 
                 String name = jo.getString("name");
                 String anons = jo.getString("anons");
-                //String content = jo.getString("content");
                 String price = jo.getString("price");
+                String id=jo.getString("id");
                 product = new Product();
 
                 product.setName(name);
                 product.setAnons(anons);
-                //product.setContent(content);
                 product.setPrice(price);
+                product.setId(id);
 
                 cities.add(product);
             }

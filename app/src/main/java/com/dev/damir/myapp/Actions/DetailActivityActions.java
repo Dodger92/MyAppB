@@ -8,15 +8,19 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.dev.damir.myapp.R;
+import com.dev.damir.myapp.api_classes.SharedPreference;
+
 public class DetailActivityActions extends AppCompatActivity {
-    TextView nameTxt, contentTxt;
-    Toolbar toolbar;
+    TextView nameTxt, contentTxt, companyNameTxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_actions);
         nameTxt = (TextView) findViewById(R.id.nameDetailTxt);
         contentTxt = (TextView) findViewById(R.id.contentDetailTxt);
+        companyNameTxt = (TextView) findViewById(R.id.companyNameTxt);
+        companyNameTxt.setText(SharedPreference.getCompanyName(getApplication()));
+       // companyNameTxt.setText(get);
         Intent i = this.getIntent();
         String name = i.getExtras().getString("NAME_KEY");
         String content = i.getExtras().getString("CONTENT_KEY");
@@ -25,11 +29,12 @@ public class DetailActivityActions extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Описание акции");
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // handle arrow click here

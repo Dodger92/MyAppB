@@ -31,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Small Text"
-                android:id="@+id/idTxt" />
+                android:id="@+id/idTxt"
+                android:visibility="invisible" />
 
 
         </LinearLayout>

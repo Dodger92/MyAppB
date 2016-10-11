@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="20dp"
-    android:background="@drawable/headerbg"
+    android:layout_height="50dp"
     android:id="@+id/headerlayout">
 
-    <ImageView
-        android:layout_width="156dp"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:background="@drawable/account"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/CityNameTxt"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textSize="15dp"
+        android:text="Город"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="изменить"
+        android:id="@+id/changeCityTxt"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/design_textinput_error_color_light"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/CityNameTxt"
+        android:layout_toEndOf="@+id/CityNameTxt"
+        android:textSize="15dp" />
+</RelativeLayout>

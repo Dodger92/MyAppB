@@ -6,7 +6,7 @@ import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.dev.damir.myapp.Category.m_JSON.Connector;
+import com.dev.damir.myapp.Companies_tab.m_JSON.Connector;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

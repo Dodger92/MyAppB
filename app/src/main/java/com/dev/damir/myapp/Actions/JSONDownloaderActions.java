@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 
-import com.dev.damir.myapp.Category.m_JSON.Connector;
+import com.dev.damir.myapp.Companies_tab.m_JSON.Connector;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -15,8 +15,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-
-
 public class JSONDownloaderActions extends AsyncTask<Void, Void, String> {
 
     Context c;

@@ -23,13 +23,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Название компании"
+        android:id="@+id/companyNameTxt"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
         android:id="@+id/nameDetailTxt"
-        android:layout_below="@+id/view"
-        android:layout_centerHorizontal="true"
         android:textColor="@color/accent_material_light"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@+id/companyNameTxt"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,9 +48,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/contentDetailTxt"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:gravity="top"
+        android:layout_marginTop="36dp"
         android:layout_below="@+id/nameDetailTxt"
-        android:layout_alignRight="@+id/nameDetailTxt"
-        android:layout_alignEnd="@+id/nameDetailTxt"
-        android:layout_marginTop="25dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

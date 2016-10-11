@@ -1,12 +1,9 @@
-package com.dev.damir.myapp.Companies.m_Model;
+package com.dev.damir.myapp.CompanyForAction.m_Model;
 
-/**
- * Created by Oclemy on 7/8/2016 for ProgrammingWizards Channel and http://www.camposha.com.
- */
+
 public class Company {
 
     String name;
-
 
 
     public String getName() {

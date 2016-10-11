@@ -1,4 +1,4 @@
-package com.dev.damir.myapp.Companies.m_JSON;
+package com.dev.damir.myapp.CompanyForAction.m_JSON;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -8,12 +8,11 @@ import java.net.URL;
 
 public class Connector {
 
-    public static Object connect(String jsonURL)
-    {
-        try
-        {
-            URL url=new URL(jsonURL);
-            HttpURLConnection con= (HttpURLConnection) url.openConnection();
+
+    public static Object connect(String jsonURL) {
+        try {
+            URL url = new URL(jsonURL);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
             //CON PROPS
             con.setRequestMethod("GET");
@@ -25,12 +24,11 @@ public class Connector {
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
-            return "Error "+e.getMessage();
+            return "Error " + e.getMessage();
 
         } catch (IOException e) {
             e.printStackTrace();
-            return "Error "+e.getMessage();
-
+            return "Error " + e.getMessage();
         }
     }
 

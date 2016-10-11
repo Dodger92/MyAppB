@@ -14,9 +14,10 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView4"
-        android:layout_centerVertical="true"
+        android:textSize="20dp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:text="О проекте"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="40dp"
-        android:textColor="#ff0000"
-        android:text="Выйти" />
+        android:gravity="top|center_vertical" />
 </RelativeLayout>

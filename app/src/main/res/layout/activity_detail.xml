@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Products.DetailActivity">
 
-    tools:context=".Category.m_JSON.DetailActivity">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,7 +41,8 @@
         android:textStyle="bold"
         android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_below="@+id/txt"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -75,6 +76,55 @@
         android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="тг"
+        android:id="@+id/textView6"
+        android:layout_alignBottom="@+id/priceDetailTxt"
+        android:layout_alignRight="@+id/textView7"
+        android:layout_alignEnd="@+id/textView7"
+        android:textStyle="bold"
+        android:textColor="@color/abc_input_method_navigation_guard" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Добавить в корзину"
+        android:id="@+id/addToBasket"
+        android:layout_marginTop="63dp"
+        android:layout_below="@+id/priceDetailTxt"
+        android:layout_centerHorizontal="true"
+
+        android:background="@android:color/holo_orange_dark"
+        android:textSize="10dp"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Перейти в корзину"
+        android:id="@+id/goToBasket"
+        android:textSize="10dp"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_below="@+id/addToBasket"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:text="ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="36dp"
+        android:id="@+id/idTxt" />
 
 
 </RelativeLayout>

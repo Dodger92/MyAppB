@@ -1,4 +1,4 @@
-package com.dev.damir.myapp.Category.m_JSON;
+package com.dev.damir.myapp.CompanyForAction.m_JSON;
 
 
 import android.app.ProgressDialog;
@@ -7,8 +7,8 @@ import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
-import com.dev.damir.myapp.Category.m_Model.Category;
-import com.dev.damir.myapp.Category.m_UI.MyAdapter;
+import com.dev.damir.myapp.Categories.m_Model.Category;
+import com.dev.damir.myapp.CompanyForAction.m_UI.MyAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -56,7 +56,9 @@ public class JSONParser extends AsyncTask<Void, Void, Boolean> {
             rv.setAdapter(new MyAdapter(c, categories));
 
         } else {
-            Toast.makeText(c, "Невозможно выполнить синтаксический анализ, проверьте подключение", Toast.LENGTH_SHORT).show();
+
+            Toast.makeText(c, "В выбранном городе,нет данных для отображения", Toast.LENGTH_SHORT).show();
+
         }
     }
 

@@ -1,10 +1,12 @@
-package com.dev.damir.myapp.Category.m_JSON;
+package com.dev.damir.myapp.Basket;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
+
+import com.dev.damir.myapp.Companies_tab.m_JSON.Connector;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -14,18 +16,18 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 
 
-public class JSONDownloader extends AsyncTask<Void, Void, String> {
+public class JSONDownloaderBasket extends AsyncTask<Void, Void, String> {
 
     Context c;
-    String jsonURL;
-    RecyclerView rv;
+    String jsonURL5;
+    RecyclerView rv_basket;
 
     ProgressDialog pd;
 
-    public JSONDownloader(Context c, String jsonURL, RecyclerView rv) {
+    public JSONDownloaderBasket(Context c, String jsonURL5, RecyclerView rv_products) {
         this.c = c;
-        this.jsonURL = jsonURL;
-        this.rv = rv;
+        this.jsonURL5 = jsonURL5;
+        this.rv_basket = rv_products;
     }
 
     @Override
@@ -53,14 +55,14 @@ public class JSONDownloader extends AsyncTask<Void, Void, String> {
             Toast.makeText(c, jsonData, Toast.LENGTH_SHORT).show();
         } else {
             //PARSER
-            new JSONParser(c, jsonData, rv).execute();
+            new JSONParserBasket(c, jsonData, rv_basket).execute();
         }
 
     }
 
     //DOWNLOAD
     private String download() {
-        Object connection = Connector.connect(jsonURL);
+        Object connection = Connector.connect(jsonURL5);
         if (connection.toString().startsWith("Ошибка")) {
             return connection.toString();
         }
@@ -75,11 +77,9 @@ public class JSONDownloader extends AsyncTask<Void, Void, String> {
                 String line;
                 StringBuffer jsonData = new StringBuffer();
 
-
                 //READ
                 while ((line = br.readLine()) != null) {
                     jsonData.append(line + "\n");
-
                 }
 
                 //CLOSE RESOURCES
