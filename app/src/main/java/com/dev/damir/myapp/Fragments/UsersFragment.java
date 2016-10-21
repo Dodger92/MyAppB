@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import com.dev.damir.myapp.R;
 
 public class UsersFragment extends Fragment {
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

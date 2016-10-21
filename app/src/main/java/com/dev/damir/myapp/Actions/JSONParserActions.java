@@ -63,9 +63,13 @@ public class JSONParserActions extends AsyncTask<Void, Void, Boolean> {
 
                 String name = jo.getString("name");
                 String content = jo.getString("content");
+                String img = jo.getString("img");
+                String companyName=jo.getString("company_id");
                 action = new Action();
                 action.setName(name);
                 action.setContent(content);
+                action.setImg(img);
+                action.setCompanyName(companyName);
                 actions.add(action);
             }
 

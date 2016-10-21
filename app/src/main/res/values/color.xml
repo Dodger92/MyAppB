@@ -3,8 +3,8 @@
 
 
     <color name="black">#000000</color>
-    <color name="blue">#00A8C9</color>
+    <color name="blue">#00a8c9</color>
     <color name="white">#FFF</color>
-    <color name="error_color">#FF0000</color>
+    <color name="error_color">#ff0000</color>
 
 </resources>

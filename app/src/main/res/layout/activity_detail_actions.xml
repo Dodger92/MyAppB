@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.tutorials.hp.jsonrecyclermulti_items.m_JSON.DetailActivity">
+    tools:context="com.dev.damir.myapp.Actions.DetailActivityActions"
+    android:background="@drawable/grey">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,37 +22,40 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Название компании"
-        android:id="@+id/companyNameTxt"
-        android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_below="@+id/view"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold" />
+        android:layout_marginTop="15dp"
+        android:id="@+id/companyNameTxt"
+        android:textSize="20sp"
+        android:textColor="@color/error_color" />
 
     <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/nameDetailTxt"
-        android:textColor="@color/accent_material_light"
-        android:textStyle="bold"
         android:layout_below="@+id/companyNameTxt"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/nameDetailTxt"
+        android:textSize="22sp"
+        android:textColor="?attr/colorAccent"
+        android:textStyle="normal|bold" />
 
     <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/contentDetailTxt"
-        android:textColor="@color/abc_input_method_navigation_guard"
-        android:gravity="top"
-        android:layout_marginTop="36dp"
         android:layout_below="@+id/nameDetailTxt"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="10dp"
+        android:id="@+id/contentDetailTxt"
+        android:textSize="20sp"
+        android:textAlignment="textStart"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

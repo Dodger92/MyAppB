@@ -2,6 +2,7 @@ package com.dev.damir.myapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -15,7 +16,6 @@ import android.widget.TextView;
 
 import com.dev.damir.myapp.Basket.BasketFragment;
 import com.dev.damir.myapp.Fragments.CitiesFragment;
-import com.dev.damir.myapp.Fragments.CompanyForActions;
 import com.dev.damir.myapp.Fragments.HomeFragment;
 import com.dev.damir.myapp.Fragments.UsersFragment;
 import com.dev.damir.myapp.api_classes.SharedPreference;
@@ -27,10 +27,16 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction myFragmentTransaction;
     TextView CityNameTxt,changeCityTxt;
     Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+         String android_id = Settings.Secure.getString(getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+      //  Toast.makeText(this,  android_id, Toast.LENGTH_SHORT).show();
+        SharedPreference.setBASKET(getApplication(),android_id);
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         myDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         myNavigationView = (NavigationView) findViewById(R.id.nav_drawer);
@@ -55,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 if (selectedMenuItem.getItemId() == R.id.nav_item_home) {
                     FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView, new HomeFragment()).commit();
-                    toolbar.setTitle("Delivery king");
+                    toolbar.setTitle("Компании");
 
                 }
                 /*if (selectedMenuItem.getItemId() == R.id.nav_item_statistics) {
@@ -70,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 }*/
                 if (selectedMenuItem.getItemId() == R.id.nav_item_action) {
                     FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.containerView, new CompanyForActions()).commit();
+                    fragmentTransaction.replace(R.id.containerView, new SecondTab()).commit();
                     toolbar.setTitle("Акции");
                 }
                 if (selectedMenuItem.getItemId() == R.id.nav_item_users) {
@@ -84,8 +90,11 @@ public class MainActivity extends AppCompatActivity {
                     toolbar.setTitle("Выберите город")
                 };*/
                 if (selectedMenuItem.getItemId() == R.id.nav_item_list_buy){
-                    Intent intent3=new Intent(MainActivity.this, BasketFragment.class);
-                    startActivity(intent3);
+                    Intent intent5=new Intent(MainActivity.this, BasketFragment.class);
+                    startActivity(intent5);
+                    //FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+                    //fragmentTransaction.replace(R.id.containerView, new BasketFragment()).commit();
+                   // toolbar.setTitle("Список покупок");
                   //  FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
                // fragmentTransaction.replace(R.id.containerView, new BasketFragment()).commit();
                           }
@@ -96,10 +105,11 @@ public class MainActivity extends AppCompatActivity {
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(this, myDrawerLayout, toolbar, R.string.app_name,
                 R.string.app_name);
-        toolbar.setTitle("Delivery king");
+        toolbar.setTitle("Компании");
         myDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerToggle.syncState();
 
     }
 
-}
+    }
+

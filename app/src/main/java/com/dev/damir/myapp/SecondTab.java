@@ -18,12 +18,12 @@ public class SecondTab extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.second_tab,null);
-        companyName=(TextView)rootView.findViewById(R.id.companyTxt);
-        jsonURL3= "http://developer92.16mb.com/mentor/public_html/?page=all_actions&id="+ SharedPreference.getCityId(getContext());
+        //companyName=(TextView)rootView.findViewById(R.id.companyTxt);
+        jsonURL3= "http://deliveryking.kz/mobile_api/public_html/?page=all_actions&id="+ SharedPreference.getCityId(getContext());
         rv_actions = (RecyclerView) rootView.findViewById(R.id.rv_actions);
         rv_actions.setLayoutManager(new LinearLayoutManager(getActivity()));
         new JSONDownloaderActions(getActivity(), jsonURL3, rv_actions).execute();
-        companyName.setText(SharedPreference.getCompanyName(getActivity()));
+//        companyName.setText(SharedPreference.getCompanyName(getActivity()));
         return rootView;
     }
 }

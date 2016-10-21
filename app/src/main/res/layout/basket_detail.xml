@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Products.DetailActivity"
-    android:background="@drawable/grey">
+    tools:context=".Products.DetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -13,14 +13,12 @@
         android:theme="@style/AppTheme.AppBarOverlay"
         android:id="@+id/view">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/blue"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
-        />
-
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
     </android.support.design.widget.AppBarLayout>
 
     <TextView
@@ -45,7 +43,7 @@
         android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_below="@+id/txt"
         android:layout_centerHorizontal="true"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,7 +74,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="цена"
         android:id="@+id/priceDetailTxt"
-        android:textColor="@color/error_color"
+        android:textColor="@color/abc_input_method_navigation_guard"
         android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true" />
 
@@ -90,12 +88,12 @@
         android:layout_alignRight="@+id/textView7"
         android:layout_alignEnd="@+id/textView7"
         android:textStyle="bold"
-        android:textColor="@color/error_color" />
+        android:textColor="@color/abc_input_method_navigation_guard" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Добавить в корзину"
+        android:text="Куплено"
         android:id="@+id/addToBasket"
         android:layout_marginTop="63dp"
         android:layout_below="@+id/priceDetailTxt"
@@ -108,14 +106,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Перейти в корзину"
-        android:id="@+id/goToBasket"
+        android:text="Удалить"
+        android:id="@+id/deleteBtn"
         android:textSize="10dp"
         android:background="@android:color/holo_orange_dark"
         android:layout_below="@+id/addToBasket"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <TextView
         android:text="ID"
@@ -127,8 +125,7 @@
         android:layout_marginLeft="26dp"
         android:layout_marginStart="26dp"
         android:layout_marginBottom="36dp"
-        android:id="@+id/idTxt"
-        android:visibility="invisible" />
+        android:id="@+id/idTxt" />
 
 
 </RelativeLayout>

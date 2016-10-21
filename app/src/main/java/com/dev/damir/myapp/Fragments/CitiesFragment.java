@@ -14,7 +14,7 @@ import com.dev.damir.myapp.R;
 
 public class CitiesFragment extends AppCompatActivity {
     RecyclerView rv_cities;
-    String jsonURL4 = "http://www.developer92.16mb.com/mentor/public_html/?page=all_cities";
+    String jsonURL4 = "http://deliveryking.kz/mobile_api/public_html/?page=all_cities";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

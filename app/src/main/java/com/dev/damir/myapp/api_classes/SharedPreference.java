@@ -1,11 +1,8 @@
 package com.dev.damir.myapp.api_classes;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-
 public class SharedPreference {
-
     static final String CITY_ID = "username";
     static final String COMPANY_NAME = "company";
     static final String CITY_NAME_VALUE = "city_value";
@@ -13,20 +10,30 @@ public class SharedPreference {
     static final String BUY_NAME = "buyName";
     static final String BUY_PRICE = "buyPrice";
     static final String BASKET="basket";
+    static final String PRODUCT_ID="product";
+
+
+
 
     static SharedPreferences getSharedPreferences(Context ctx) {
         return PreferenceManager.getDefaultSharedPreferences(ctx);
     }
-
-    public static String getBASKET() {
-        return BASKET;
+    public static String getProductId(Context ctx) {
+        return getSharedPreferences(ctx).getString(PRODUCT_ID, "");
     }
+    public static void setProductId(Context ctx, String product) {
+        SharedPreferences.Editor editor = getSharedPreferences(ctx).edit();
+        editor.putString(PRODUCT_ID, product);
+        editor.commit();
+    }
+    public static String getBASKET(Context ctx) {
+        return getSharedPreferences(ctx).getString(BASKET, "");
+    };
     public static void setBASKET(Context ctx, String basket) {
         SharedPreferences.Editor editor = getSharedPreferences(ctx).edit();
         editor.putString(BASKET, basket);
         editor.commit();
     }
-
     public static String getBuyName() {
         return BUY_NAME;
     }

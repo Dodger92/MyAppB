@@ -11,10 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dev.damir.myapp.SecondTab;
 import com.dev.damir.myapp.FirstTab;
 import com.dev.damir.myapp.R;
-
+import com.dev.damir.myapp.SecondTab;
 
 
 public class HomeFragment extends Fragment {
@@ -30,7 +29,7 @@ public class HomeFragment extends Fragment {
          *Inflate tab_layout and setup Views.
          */
             View x =  inflater.inflate(R.layout.home_tab_layout,null);
-            tabLayout = (TabLayout) x.findViewById(R.id.tabs);
+           // tabLayout = (TabLayout) x.findViewById(R.id.tabs);
             viewPager = (ViewPager) x.findViewById(R.id.viewpager);
 
         /**
@@ -44,12 +43,12 @@ public class HomeFragment extends Fragment {
          * Maybe a Support Library Bug .
          */
 
-        tabLayout.post(new Runnable() {
+/*        tabLayout.post(new Runnable() {
             @Override
             public void run() {
                     tabLayout.setupWithViewPager(viewPager);
                    }
-        });
+        });*/
 
         return x;
 

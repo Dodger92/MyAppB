@@ -1,37 +1,33 @@
-package com.dev.damir.myapp.Products;
-import android.app.ProgressDialog;
+package com.dev.damir.myapp.Products.Basket;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
+
+import com.dev.damir.myapp.Products.Product;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-public class JSONParserproducts extends AsyncTask<Void, Void, Boolean> {
+
+public class JPP extends AsyncTask<Void, Void, Boolean> {
     Context c;
     String jsonData;
-    RecyclerView rv_products;
 
-    ProgressDialog pd;
+
     ArrayList<Product> cities = new ArrayList<>();
 
-    public JSONParserproducts(Context c, String jsonData, RecyclerView rv_products) {
+    public JPP(Context c, String jsonData) {
         this.c = c;
         this.jsonData = jsonData;
-        this.rv_products = rv_products;
+
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
 
-        pd = new ProgressDialog(c);
-        pd.setTitle("Обработка");
-        pd.setMessage("Обработка...Пожалуйста подождите");
-        pd.show();
     }
 
     @Override
@@ -42,14 +38,11 @@ public class JSONParserproducts extends AsyncTask<Void, Void, Boolean> {
     @Override
     protected void onPostExecute(Boolean isParsed) {
         super.onPostExecute(isParsed);
-
-        pd.dismiss();
         if (isParsed) {
             //BIND
-            rv_products.setAdapter(new MyAdapterProducts(c, cities));
-
+            Toast.makeText(c, "Ошибка в добавлении", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(c, "В выбранной категории,нет данных для отображения", Toast.LENGTH_LONG).show();
+            Toast.makeText(c, "Добавлен в список покупок", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -68,15 +61,13 @@ public class JSONParserproducts extends AsyncTask<Void, Void, Boolean> {
                 String anons = jo.getString("anons");
                 String price = jo.getString("price");
                 String id=jo.getString("id");
-                String img=jo.getString("img");
-
                 product = new Product();
 
                 product.setName(name);
                 product.setAnons(anons);
                 product.setPrice(price);
                 product.setId(id);
-                product.setImg_url(img);
+
                 cities.add(product);
             }
 

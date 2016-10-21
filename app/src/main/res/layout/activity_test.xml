@@ -32,4 +32,21 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="18sp" />
+
+    <Switch
+        android:text="Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/switch1"
+        android:textOff="OFF"
+        android:textOn="ON"
+        app:showText="true"
+        android:layout_below="@+id/TxtToBuy"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="64dp"
+        android:layout_marginEnd="64dp" />
+    android:layout_below="@+id/TxtToBuy"
+        android:layout_toRightOf="@+id/TxtToBuy"
+        android:layout_toEndOf="@+id/TxtToBuy" />
 </RelativeLayout>

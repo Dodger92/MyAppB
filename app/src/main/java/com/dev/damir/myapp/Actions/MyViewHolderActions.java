@@ -11,7 +11,7 @@ import com.dev.damir.myapp.R;
 public class MyViewHolderActions extends RecyclerView.ViewHolder implements View.OnClickListener {
     ImageView img;
 
-    TextView nameTxt,anonsTxt,contentTxt;
+    TextView nameTxt,anonsTxt,contentTxt,companyName;
     //ItemClickListener itemClickListener;
     ItemClickListenerActions itemClickListenerActions;
 
@@ -20,6 +20,7 @@ public class MyViewHolderActions extends RecyclerView.ViewHolder implements View
         nameTxt= (TextView) itemView.findViewById(R.id.nameTxt);
         anonsTxt= (TextView) itemView.findViewById(R.id.anonsTxt);
         contentTxt= (TextView) itemView.findViewById(R.id.contentTxt);
+        companyName=(TextView)itemView.findViewById(R.id.companyName);
         img = (ImageView) itemView.findViewById(R.id.modelView);
         itemView.setOnClickListener(this);
 

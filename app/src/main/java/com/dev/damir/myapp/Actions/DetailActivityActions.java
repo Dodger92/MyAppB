@@ -8,7 +8,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.dev.damir.myapp.R;
-import com.dev.damir.myapp.api_classes.SharedPreference;
 
 public class DetailActivityActions extends AppCompatActivity {
     TextView nameTxt, contentTxt, companyNameTxt;
@@ -19,13 +18,15 @@ public class DetailActivityActions extends AppCompatActivity {
         nameTxt = (TextView) findViewById(R.id.nameDetailTxt);
         contentTxt = (TextView) findViewById(R.id.contentDetailTxt);
         companyNameTxt = (TextView) findViewById(R.id.companyNameTxt);
-        companyNameTxt.setText(SharedPreference.getCompanyName(getApplication()));
+        //companyNameTxt.setText(SharedPreference.getCompanyName(getApplication()));
        // companyNameTxt.setText(get);
         Intent i = this.getIntent();
+        String companyName=i.getExtras().getString("COMPANY_KEY");
         String name = i.getExtras().getString("NAME_KEY");
         String content = i.getExtras().getString("CONTENT_KEY");
         nameTxt.setText(name);
         contentTxt.setText(content);
+        companyNameTxt.setText("Магнум");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Описание акции");
         setSupportActionBar(toolbar);

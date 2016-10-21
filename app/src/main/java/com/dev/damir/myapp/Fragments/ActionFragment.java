@@ -25,7 +25,7 @@ public class ActionFragment  extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Список акций");
         setSupportActionBar(toolbar);
-        jsonURL3= "http://developer92.16mb.com/mentor/public_html/?page=all_actions&id="+id;
+        jsonURL3= "http://deliveryking.kz/mobile_api/public_html/?page=all_actions&id="+id;
         rv_actions = (RecyclerView) findViewById(R.id.rv_actions);
         rv_actions.setLayoutManager(new LinearLayoutManager(this));
         new JSONDownloaderActions(this, jsonURL3, rv_actions).execute();

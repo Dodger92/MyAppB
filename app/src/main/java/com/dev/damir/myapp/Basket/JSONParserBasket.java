@@ -47,10 +47,11 @@ public class JSONParserBasket extends AsyncTask<Void, Void, Boolean> {
         pd.dismiss();
         if (isParsed) {
             //BIND
+
             rv_basket.setAdapter(new MyAdapterBasket(c, cities));
 
         } else {
-            Toast.makeText(c, "В выбранной категории,нет данных для отображения", Toast.LENGTH_LONG).show();
+            Toast.makeText(c, "Нет товаров в списке", Toast.LENGTH_SHORT).show();
         }
     }
 
